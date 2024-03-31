@@ -52,7 +52,7 @@ public class Main {
         mainloop:
         while(isRunning){
             System.out.println("\nMenu:");
-            System.out.println("1 - Dodać maga\n2 - Usunąć maga\n3 - Wypisać wszystkich magów\n4 - Dodać wieżę\n5 - Usunąć wieżę\n6 - Wypisać wszystkie wieże\n7 - Wyjść");
+            System.out.println("1 - Dodać maga\n2 - Usunąć maga\n3 - Wypisać wszystkich magów\n4 - Dodać wieżę\n5 - Usunąć wieżę\n6 - Wypisać wszystkie wieże\n7 - Komenda\n8 - Wyjść");
             int choise = Integer.parseInt(sc.nextLine());
             if(choise == 1){
                 entityTransaction.begin();
@@ -142,6 +142,22 @@ public class Main {
                 entityTransaction.commit();
             }
             else if(choise == 7){
+                entityTransaction.begin();
+                System.out.println("\nWieżę z więcej niż dwoma magami:");
+
+                List<Tower> towersWithMoreThanTwoMages = entityManager.createQuery(
+                                "SELECT t FROM Tower t WHERE SIZE(t.mages) > 2", Tower.class)
+                        .getResultList();
+
+                for (Tower tower : towersWithMoreThanTwoMages) {
+                    System.out.println("Wieża: " + tower.getName() + ", Wysokość: " + tower.getHeight() + ", Magowie:");
+                    for (Mage mage : tower.getMages()) {
+                        System.out.println("  - " + mage.getName() + ", Level: " + mage.getLevel());
+                    }
+                }
+                entityTransaction.commit();
+            }
+            else if(choise == 8){
                 entityTransaction.begin();
                 System.out.println("\nExiting...");
                 break mainloop;
