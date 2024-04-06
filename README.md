@@ -24,4 +24,9 @@ This repository contains completed labs for the Technology platforms course at m
   - Folder: Lab_4
   - Status: Completed and Published
   - Description: The JPA lab introduces students to Java Persistence API for managing relational data in Java applications. Topics covered include entity management, object-relational mapping (ORM), CRUD operations, and querying with JPQL.
+5. Unit tests
+  - Folder: Lab_5
+  - Status: Completed and Published
+  - Description: During laboratory classes, I familiarize myself with the basic mechanisms of writing unit tests using the JUnit and Mockito libraries.
+
 
