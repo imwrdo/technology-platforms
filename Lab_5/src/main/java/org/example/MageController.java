@@ -28,6 +28,10 @@ public class MageController {
             Mage mage = new Mage();
             mage.setName(name);
             mage.setLevel(mageLevel);
+            if (repository.find(mage.getName()).isPresent()) {
+                return "bad request";
+            }
+
             repository.save(mage);
             return "done";
         } catch (NumberFormatException e) {
