@@ -24,15 +24,13 @@ This repository contains completed labs for the Technology platforms course at m
   - Folder: Lab_4
   - Status: Completed and Published
   - Description: The JPA lab introduces students to Java Persistence API for managing relational data in Java applications. Topics covered include entity management, object-relational mapping (ORM), CRUD operations, and querying with JPQL.
-5. Parallelisation of operations
-  - Folder: Lab_5
-  - Status: Completed and Published
-  - Description: The JPA lab introduces students to Java Persistence API for managing relational data in Java applications. Topics covered include entity management, object-relational mapping (ORM), CRUD operations, and querying with JPQL.
 5. Unit tests
   - Folder: Lab_5
   - Status: Completed and Published
-  - Description: an application implementation that processes a set of images using a pipeline of
-operations. The application takes as start arguments the location of the directory
-containing images and the location where the images will be saved after processing.
+  - Description: The JPA lab introduces students to Java Persistence API for managing relational data in Java applications. Topics covered include entity management, object-relational mapping (ORM), CRUD operations, and querying with JPQL.
+6. Parallelisation of operations
+  - Folder: Lab_6
+  - Status: Completed and Published
+  - Description: an application implementation that processes a set of images using a pipeline of operations. The application takes as start arguments the location of the directory containing images and the location where the images will be saved after processing.
 
 
