@@ -12,18 +12,26 @@ import java.util.List;
 import java.util.concurrent.ForkJoinPool;
 import java.util.stream.Collectors;
 
+// input - D:\201267\Lab_6\photos
+// output - D:\201267\Lab_6\photos_out
+
 public class Main {
-    private static final String INPUT_DIRECTORY = "C:\\Users\\Administrator\\Dropbox\\PC (2)\\Desktop\\PG\\PT\\Lab_6\\photos";
-    private static final String OUTPUT_DIRECTORY = "C:\\Users\\Administrator\\Dropbox\\PC (2)\\Desktop\\PG\\PT\\Lab_6\\photos_out";
-    private static final int THREAD_POOL_SIZE = 4;
+    private static String INPUT_DIRECTORY;
+    private static String OUTPUT_DIRECTORY;
+    private static final int THREAD_POOL_SIZE = 10;
 
     public static void main(String[] args){
+
+        INPUT_DIRECTORY = args[0];
+        OUTPUT_DIRECTORY = args[1];
+
+        long time = System.currentTimeMillis();
         try {
             List<Pair<String, BufferedImage>> imagePairs = Files.list(Path.of(INPUT_DIRECTORY))
                     .parallel()
                     .map(Main::loadImagePair)
                     .collect(Collectors.toList());
-            System.out.println("Loaded " + imagePairs.size() + " images");
+            System.out.println("Załadowano " + imagePairs.size() + " zdjęć");
 
             ForkJoinPool customThreadPool = new ForkJoinPool(THREAD_POOL_SIZE);
             customThreadPool.submit(() ->
@@ -31,9 +39,11 @@ public class Main {
                             .map(Main::transformImagePair)
                             .forEach(Main::saveImage)
             ).get();
+            long operationTime = System.currentTimeMillis() - time;
+            System.out.println("Czas wykonania: "+ operationTime/1000.0 + " s");
 
         }catch (Exception e){
-            System.out.println("Failed image processing: " + e.getMessage());
+            System.out.println("Bład: " + e.getMessage());
             e.printStackTrace();
         }
     }
@@ -43,7 +53,7 @@ public class Main {
             String name = path.getFileName().toString();
             return Pair.of(name, image);
         }catch (IOException e){
-            System.out.println("Failed to load image: " + path);
+            System.out.println("Się nie udało załadować zdjęcia: " + path);
             e.printStackTrace();
             return null;
         }
@@ -52,7 +62,7 @@ public class Main {
         String name = pair.getLeft();
         BufferedImage image = pair.getRight();
         if (image == null) {
-            System.out.println("Failed to transform image: " + name + " - Image is null");
+            System.out.println("Się nie udało zmienić zdjęcia: " + name + " - Image is null");
             return null;
         }
         BufferedImage transformedImage = new BufferedImage(image.getWidth(), image.getHeight(), BufferedImage.TYPE_INT_RGB);
@@ -63,8 +73,8 @@ public class Main {
                 int red = color.getRed();
                 int blue = color.getGreen();
                 int green = color.getBlue();
-                Color outColor = new Color(red, green, blue);
-                transformedImage.setRGB(x, y, outColor.getRGB());
+                Color outColor = new Color(green, blue, red);
+                transformedImage.setRGB(image.getWidth()-x-1,image.getHeight()-y -1, outColor.getRGB());
             }
         }
 
@@ -75,15 +85,15 @@ public class Main {
         String name = pair.getLeft();
         BufferedImage image = pair.getRight();
         if (image == null) {
-            System.out.println("Failed to save image: " + name + " - Transformed image is null");
+            System.out.println("Się nie udało zapisać zdjęcia: " + name + " - Transformed image is null");
             return;
         }
         Path outputPath = Path.of(OUTPUT_DIRECTORY, name);
         try {
             ImageIO.write(image, "png", outputPath.toFile());
-            System.out.println("Saved image: " + outputPath);
+            System.out.println("Załadowano zdjęcie: " + outputPath);
         } catch (IOException e) {
-            System.out.println("Failed to save image: " + outputPath);
+            System.out.println("Się nie udało zapisać zdjęcia: " + outputPath);
             e.printStackTrace();
         }
     }
