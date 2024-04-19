@@ -8,6 +8,7 @@ This repository contains completed labs for the Technology platforms course at m
 
 
 ## Labs Description
+### Java part:
 1. Collections in Java
   - Folder: Lab_1
   - Status: Completed and Published
