@@ -1,0 +1,15 @@
+C:\Users\Administrator\Dropbox\PC (2)\Desktop\PG\PT\Lab_7\Lab_7\bin\Debug\net6.0\Lab_7.exe
+C:\Users\Administrator\Dropbox\PC (2)\Desktop\PG\PT\Lab_7\Lab_7\bin\Debug\net6.0\Lab_7.deps.json
+C:\Users\Administrator\Dropbox\PC (2)\Desktop\PG\PT\Lab_7\Lab_7\bin\Debug\net6.0\Lab_7.runtimeconfig.json
+C:\Users\Administrator\Dropbox\PC (2)\Desktop\PG\PT\Lab_7\Lab_7\bin\Debug\net6.0\Lab_7.dll
+C:\Users\Administrator\Dropbox\PC (2)\Desktop\PG\PT\Lab_7\Lab_7\bin\Debug\net6.0\Lab_7.pdb
+C:\Users\Administrator\Dropbox\PC (2)\Desktop\PG\PT\Lab_7\Lab_7\obj\Debug\net6.0\Lab_7.csproj.AssemblyReference.cache
+C:\Users\Administrator\Dropbox\PC (2)\Desktop\PG\PT\Lab_7\Lab_7\obj\Debug\net6.0\Lab_7.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Administrator\Dropbox\PC (2)\Desktop\PG\PT\Lab_7\Lab_7\obj\Debug\net6.0\Lab_7.AssemblyInfoInputs.cache
+C:\Users\Administrator\Dropbox\PC (2)\Desktop\PG\PT\Lab_7\Lab_7\obj\Debug\net6.0\Lab_7.AssemblyInfo.cs
+C:\Users\Administrator\Dropbox\PC (2)\Desktop\PG\PT\Lab_7\Lab_7\obj\Debug\net6.0\Lab_7.csproj.CoreCompileInputs.cache
+C:\Users\Administrator\Dropbox\PC (2)\Desktop\PG\PT\Lab_7\Lab_7\obj\Debug\net6.0\Lab_7.dll
+C:\Users\Administrator\Dropbox\PC (2)\Desktop\PG\PT\Lab_7\Lab_7\obj\Debug\net6.0\refint\Lab_7.dll
+C:\Users\Administrator\Dropbox\PC (2)\Desktop\PG\PT\Lab_7\Lab_7\obj\Debug\net6.0\Lab_7.pdb
+C:\Users\Administrator\Dropbox\PC (2)\Desktop\PG\PT\Lab_7\Lab_7\obj\Debug\net6.0\Lab_7.genruntimeconfig.cache
+C:\Users\Administrator\Dropbox\PC (2)\Desktop\PG\PT\Lab_7\Lab_7\obj\Debug\net6.0\ref\Lab_7.dll
