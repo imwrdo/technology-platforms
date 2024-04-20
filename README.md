@@ -33,5 +33,8 @@ This repository contains completed labs for the Technology platforms course at m
   - Folder: Lab_6
   - Status: Completed and Published
   - Description: an application implementation that processes a set of images using a pipeline of operations. The application takes as start arguments the location of the directory containing images and the location where the images will be saved after processing.
-
+### C# part:
+ - Folder: Lab_7
+ - Status: In progress
+ - Description: This lab involves creating a console application in C# using Visual Studio. Tasks include displaying the contents of a directory, displaying directory contents recursively with indentation, implementing extension methods for DirectoryInfo and FileSystemInfo classes, displaying file tree with file names, sizes, and DOS attributes, loading directory elements into a sorted collection, and serializing/deserializing the collection using BinaryFormatter.
 
