@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Runtime.Serialization.Formatters.Binary;
@@ -7,30 +7,36 @@ namespace lab_7
 {
     public static class FileSystemExtensions
     {
-        public static DateTime GetOldestFile(this DirectoryInfo directoryInfo)
+        public static (DateTime, String) GetOldestFile(this DirectoryInfo directoryInfo)
         {
             DateTime oldestDateTime = DateTime.Now;
+            String oldestFileName = string.Empty;
 
             foreach (var subDirectory in directoryInfo.GetDirectories())
             {
-                DateTime subDirectoryOldestDateTime = subDirectory.GetOldestFile();
+                (DateTime subDirectoryOldestDateTime, String name) = subDirectory.GetOldestFile();
                 if (subDirectoryOldestDateTime < oldestDateTime)
                 {
                     oldestDateTime = subDirectoryOldestDateTime;
+                    oldestFileName = name;
                 }
             }
 
             foreach (var file in directoryInfo.GetFiles())
             {
                 DateTime fileDateTime = file.CreationTime;
+                String fileName = file.Name;
                 if (fileDateTime < oldestDateTime)
                 {
                     oldestDateTime = fileDateTime;
+                    oldestFileName = fileName;
                 }
             }
-
-            return oldestDateTime;
+            
+            return (oldestDateTime, oldestFileName);
         }
+
+        
 
         public static string GetDOSAttributes(this FileSystemInfo fileSystemInfo)
         {
@@ -88,7 +94,7 @@ namespace lab_7
                 }
                 else if (info is DirectoryInfo subDirectoryInfo)
                 {
-                    Console.WriteLine($"{indentation}{subDirectoryInfo.Name} (Contains: {subDirectoryInfo.GetFileSystemInfos().Length} items) {subDirectoryInfo.GetDOSAttributes()}");
+                    Console.WriteLine($"{indentation}{subDirectoryInfo.Name} (Has: {subDirectoryInfo.GetFileSystemInfos().Length} items) {subDirectoryInfo.GetDOSAttributes()}");
                     ListAllFilesIndented(subDirectoryInfo, indentationLevel + 1);
                 }
             }
@@ -111,7 +117,7 @@ namespace lab_7
                 }
             }
 
-            string serializedFilePath = Path.Combine(directoryPath, "test.txt");
+            string serializedFilePath = Path.Combine(directoryPath, "\\test.txt");
             SerializeData(items, serializedFilePath);
 
             var deserializedItems = DeserializeData<SortedDictionary<string, long>>(serializedFilePath);
@@ -146,7 +152,7 @@ namespace lab_7
             try
             {
                 ListAllFilesIndented(directoryInfo, 0);
-                Console.WriteLine("The oldest file in the directory: " + directoryInfo.GetOldestFile());
+                Console.WriteLine("The oldest file in the directory: " + directoryInfo.GetOldestFile().Item1 +": " + directoryInfo.GetOldestFile().Item2 );
                 LoadDirectoryData(directoryPath);
             }
             catch (Exception e)
