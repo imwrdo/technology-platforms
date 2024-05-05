@@ -34,7 +34,13 @@ This repository contains completed labs for the Technology platforms course at m
   - Status: Completed and Published
   - Description: an application implementation that processes a set of images using a pipeline of operations. The application takes as start arguments the location of the directory containing images and the location where the images will be saved after processing.
 ### C# part:
+7. DirectoryInfo
  - Folder: Lab_7
  - Status: Completed and Published
  - Description: This lab involves creating a console application in C# using Visual Studio. Tasks include displaying the contents of a directory, displaying directory contents recursively with indentation, implementing extension methods for DirectoryInfo and FileSystemInfo classes, displaying file tree with file names, sizes, and DOS attributes, loading directory elements into a sorted collection, and serializing/deserializing the collection using BinaryFormatter.
+8. WPF
+ - Folder: Lab_8
+ - Status: Completed and Published
+ - Description: This lab involves creating a windows application in C# using Visual Studio. Tasks include displaying the contents of a directory, displaying directory contents with indentation, creating new files.
+
 
