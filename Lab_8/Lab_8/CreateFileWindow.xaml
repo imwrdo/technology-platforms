@@ -1,4 +1,4 @@
-﻿<Window x:Class="Lab_8.CreateFileWindow"
+<Window x:Class="Lab_8.CreateFileWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
@@ -7,7 +7,11 @@
         mc:Ignorable="d"
         Title="File Creating" Height="400" Width="400" ResizeMode="NoResize">
     <StackPanel Orientation="Vertical" Margin="20">
-        <TextBlock FontSize="24" Margin="0 0 0 20">Create</TextBlock>
+        <StackPanel.Background>
+            <ImageBrush ImageSource="D:\201267\Lab_8\Lab_8/pobrane_2.jpg" Stretch="Uniform"/>
+        </StackPanel.Background>
+
+        <TextBlock FontSize="24" Margin="0 0 0 20">Create new file</TextBlock>
         <StackPanel Orientation="Horizontal" Margin="0 0 0 20">
             <TextBlock Margin="0 0 45 0">Name:</TextBlock>
             <TextBox Name="nameTextBox" MinWidth="250" />
