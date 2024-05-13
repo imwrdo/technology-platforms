@@ -42,5 +42,9 @@ This repository contains completed labs for the Technology platforms course at m
  - Folder: Lab_8
  - Status: Completed and Published
  - Description: This lab involves creating a windows application in C# using Visual Studio. Tasks include displaying the contents of a directory, displaying directory contents with indentation, creating new files.
+9. LINQ
+ - Folder: Lab_9
+ - Status: Completed and Published
+ - Description: The LINQ lab introduces students to Language Integrated Query for managing relational data in C# applications. Topics covered include entity management, object-relational mapping (ORM), CRUD operations, and querying LINQ.
 
 
