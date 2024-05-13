@@ -1,0 +1,15 @@
+/Users/nickpozniak/PG/technology-platforms/Lab_9/Lab_9/bin/Debug/net7.0/Lab_9
+/Users/nickpozniak/PG/technology-platforms/Lab_9/Lab_9/bin/Debug/net7.0/Lab_9.deps.json
+/Users/nickpozniak/PG/technology-platforms/Lab_9/Lab_9/bin/Debug/net7.0/Lab_9.runtimeconfig.json
+/Users/nickpozniak/PG/technology-platforms/Lab_9/Lab_9/bin/Debug/net7.0/Lab_9.dll
+/Users/nickpozniak/PG/technology-platforms/Lab_9/Lab_9/bin/Debug/net7.0/Lab_9.pdb
+/Users/nickpozniak/PG/technology-platforms/Lab_9/Lab_9/obj/Debug/net7.0/Lab_9.csproj.AssemblyReference.cache
+/Users/nickpozniak/PG/technology-platforms/Lab_9/Lab_9/obj/Debug/net7.0/Lab_9.GeneratedMSBuildEditorConfig.editorconfig
+/Users/nickpozniak/PG/technology-platforms/Lab_9/Lab_9/obj/Debug/net7.0/Lab_9.AssemblyInfoInputs.cache
+/Users/nickpozniak/PG/technology-platforms/Lab_9/Lab_9/obj/Debug/net7.0/Lab_9.AssemblyInfo.cs
+/Users/nickpozniak/PG/technology-platforms/Lab_9/Lab_9/obj/Debug/net7.0/Lab_9.csproj.CoreCompileInputs.cache
+/Users/nickpozniak/PG/technology-platforms/Lab_9/Lab_9/obj/Debug/net7.0/Lab_9.dll
+/Users/nickpozniak/PG/technology-platforms/Lab_9/Lab_9/obj/Debug/net7.0/refint/Lab_9.dll
+/Users/nickpozniak/PG/technology-platforms/Lab_9/Lab_9/obj/Debug/net7.0/Lab_9.pdb
+/Users/nickpozniak/PG/technology-platforms/Lab_9/Lab_9/obj/Debug/net7.0/Lab_9.genruntimeconfig.cache
+/Users/nickpozniak/PG/technology-platforms/Lab_9/Lab_9/obj/Debug/net7.0/ref/Lab_9.dll
